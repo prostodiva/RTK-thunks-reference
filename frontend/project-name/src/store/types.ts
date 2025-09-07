@@ -1,3 +1,5 @@
+
+//city types
 export interface City {
   id: number;
   name: string;
@@ -14,3 +16,13 @@ export const initialState: CitiesState = {
   loading: false,
   error: null,
 };
+
+
+
+//food types
+export interface Food {
+  id: number;
+  name: string;
+  city_id: number;
+  price: number;
+}

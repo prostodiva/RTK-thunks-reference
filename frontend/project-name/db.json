@@ -3,5 +3,11 @@
     { "id": 1, "name": "New York" },
     { "id": 2, "name": "London" },
     { "id": 3, "name": "Paris" }
+  ],
+  "foods": [
+    { "id": 1, "name": "Pizza Margherita", "city_id": 1, "price": 15.99 },
+    { "id": 2, "name": "Fish and Chips", "city_id": 2, "price": 12.50 },
+    { "id": 3, "name": "Croissant", "city_id": 3, "price": 3.50 },
+    { "id": 4, "name": "Bagel", "city_id": 1, "price": 4.99 }
   ]
 }

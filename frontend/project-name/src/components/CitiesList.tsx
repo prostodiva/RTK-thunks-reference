@@ -3,16 +3,17 @@ import { useAppDispatch } from '../hooks/useDispatch';
 import type { RootState } from '../store';
 import { fetchCities } from '../store/thunks/citiesThunk';
 import Button from './Button';
+import CityListItem from './CityListItem';
 
 function CitiesList() {
   const dispatch = useAppDispatch();
-  const { cities, loading, error }= useSelector((state: RootState) => state.cities);
+  const { cities, loading, error } = useSelector((state: RootState) => state.cities);
 
   const handleShowCities = () => {
     dispatch(fetchCities());
   };
 
-   if (loading) {
+  if (loading) {
     return <div>Loading cities...</div>;
   }
 
@@ -25,8 +26,8 @@ function CitiesList() {
     );
   }
 
-  const renderedCities = cities.map((city) => {
-    return <li key={city.id}>{city.name}</li>;
+  const content = cities.map((city) => {
+    return <CityListItem key={city.id} city={city} />;
   });
 
   return (
@@ -38,7 +39,7 @@ function CitiesList() {
         </Button>
       </div>
       <div>
-        <ul>{renderedCities}</ul>
+        <ul>{content}</ul>
       </div>
     </div>
   );
