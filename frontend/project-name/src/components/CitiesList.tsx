@@ -32,9 +32,8 @@ function CitiesList() {
 
   return (
     <div>
-      <h1>Cities List</h1>
       <div>
-        <Button primary onClick={() => handleShowCities()}>
+        <Button secondary onClick={() => handleShowCities()}>
           Show cities
         </Button>
       </div>

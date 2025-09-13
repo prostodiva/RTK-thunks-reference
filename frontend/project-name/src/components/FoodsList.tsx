@@ -1,4 +1,3 @@
-// In your component
 import { useFetchFoodsByCityQuery } from '../store/api/foodsApi';
 
 interface FoodsListProps {

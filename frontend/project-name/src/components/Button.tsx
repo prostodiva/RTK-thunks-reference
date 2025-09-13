@@ -4,6 +4,7 @@ import { memo } from 'react';
 interface ButtonProps {
   children: React.ReactNode;
   primary?: boolean;
+  secondary?: boolean;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
   className?: string;
@@ -14,6 +15,7 @@ const Button = memo(
   ({
     children,
     primary,
+    secondary,
     type = 'button',
     disabled = false,
     className,
@@ -23,6 +25,7 @@ const Button = memo(
       'text-center py-3 px-4 border',
       {
         'bg-gray-500 text-white hover:bg-gray-800': primary,
+        'bg-purple-700 text-white hover:bg-purple-800' : secondary,
         'opacity-50 cursor-not-allowed': disabled,
       },
       className

@@ -26,3 +26,4 @@ export interface Food {
   city_id: number;
   price: number;
 }
+

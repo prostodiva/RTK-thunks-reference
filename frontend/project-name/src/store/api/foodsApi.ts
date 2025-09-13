@@ -16,7 +16,7 @@ const foodsApi = createApi({
                     city_id: cityId, 
                 },
                 }),
-                providesTags: (result, _, { cityId }) => [ // eslint-disable-line @typescript-eslint/no-unused-vars
+                providesTags: (result, _, { cityId }) => [  // eslint-disable-line @typescript-eslint/no-unused-vars
                 { type: 'Food', id: 'LIST' },
                 ...(result?.map(({ id }) => ({ type: 'Food' as const, id })) || []),
                 ],

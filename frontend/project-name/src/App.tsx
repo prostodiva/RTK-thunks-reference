@@ -10,6 +10,11 @@ import Root from './root/Root';
 import DashboardPage from './pages/DashboardPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import MyTripPage from './pages/MyTripPage.tsx';
+import London from './pages/London.tsx';
+import Berlin from './pages/Berlin.tsx';
+import Paris from './pages/Paris.tsx';
+import Custom from './pages/Custom.tsx';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +41,26 @@ const router = createBrowserRouter([
         path: '/dashboard',
         element: <DashboardPage />,
       },
+      {
+        path: '/trip',
+        element: <MyTripPage />
+      },
+      {
+        path: '/london',
+        element: <London />
+      },
+      {
+        path: '/berlin',
+        element: <Berlin />
+      },
+      {
+        path: '/paris',
+        element: <Paris />
+      },
+      {
+        path: '/custom',
+        element: <Custom />
+      }
     ],
   },
 ]);
